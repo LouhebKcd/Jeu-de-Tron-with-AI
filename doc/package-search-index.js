@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"model.algorithmes"},{"l":"model.evaluation"},{"l":"model.jeu"},{"l":"vue"}]

@@ -1,0 +1,61 @@
+Ce fichier présente les résultats d'une expérimentation où une équipe utilise l'algorithme SOS 
+et l'autre utilise l'algorithme Paranoid. Les expériences sont menées à différentes profondeurs, 
+avec des équipes de tailles variées, et indiquent le nombre de victoires pour chaque équipe.
+
+Profondeur 2 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 64 victoires
+Equipe equipe2 : 35 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 68 victoires
+Equipe equipe2 : 30 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 63 victoires
+Equipe equipe2 : 31 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 62 victoires
+Equipe equipe2 : 34 victoires
+Profondeur 3 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 70 victoires
+Equipe equipe2 : 28 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 64 victoires
+Equipe equipe2 : 34 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 55 victoires
+Equipe equipe2 : 38 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 52 victoires
+Equipe equipe2 : 36 victoires
+Profondeur 4 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 65 victoires
+Equipe equipe2 : 30 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 65 victoires
+Equipe equipe2 : 34 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 57 victoires
+Equipe equipe2 : 34 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 59 victoires
+Equipe equipe2 : 30 victoires
+Profondeur 5 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 81 victoires
+Equipe equipe2 : 17 victoires
+

@@ -1,0 +1,248 @@
+Ce fichier contient les résultats d'une expérimentation qui varie la profondeur et la taille 
+de la grille. Pour chaque profondeur, 100 jeux ont été lancés avec différentes tailles de grille. 
+Les robots impliqués sont robot1 (SOS), robot2 (MaxN), robot3 (Paranoid) et robot4 (Random). 
+Les résultats sont répertoriés pour chaque combinaison de profondeur et de taille de grille, 
+en indiquant le nombre de victoires de chaque robot.
+
+Profondeur 2 :
+Taille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 3 victoires
+Joueur :robot1 : 43 victoires
+Joueur :robot3 : 9 victoires
+Joueur :robot2 : 31 victoires
+Taille 5 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 36 victoires
+Joueur :robot3 : 10 victoires
+Joueur :robot2 : 50 victoires
+Taille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 3 victoires
+Joueur :robot1 : 49 victoires
+Joueur :robot3 : 8 victoires
+Joueur :robot2 : 35 victoires
+Taille 7 :
+Résultats des expérimentations:
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 8 victoires
+Joueur :robot2 : 49 victoires
+Taille 8 :
+Résultats des expérimentations:
+Joueur :robot1 : 40 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 58 victoires
+Taille 9 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 36 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 60 victoires
+Taille 10 :
+Résultats des expérimentations:
+Joueur :robot1 : 44 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 53 victoires
+Taille 11 :
+Résultats des expérimentations:
+Joueur :robot1 : 33 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 63 victoires
+Taille 12 :
+Résultats des expérimentations:
+Joueur :robot1 : 42 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 54 victoires
+Profondeur 3 :
+Taille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 33 victoires
+Joueur :robot3 : 12 victoires
+Joueur :robot2 : 40 victoires
+Taille 5 :
+Résultats des expérimentations:
+Joueur :robot1 : 37 victoires
+Joueur :robot3 : 18 victoires
+Joueur :robot2 : 42 victoires
+Taille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 2 victoires
+Joueur :robot1 : 43 victoires
+Joueur :robot3 : 5 victoires
+Joueur :robot2 : 48 victoires
+Taille 7 :
+Résultats des expérimentations:
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 56 victoires
+Taille 8 :
+Résultats des expérimentations:
+Joueur :robot1 : 32 victoires
+Joueur :robot3 : 5 victoires
+Joueur :robot2 : 63 victoires
+Taille 9 :
+Résultats des expérimentations:
+Joueur :robot1 : 34 victoires
+Joueur :robot3 : 5 victoires
+Joueur :robot2 : 60 victoires
+Taille 10 :
+Résultats des expérimentations:
+Joueur :robot1 : 27 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 70 victoires
+Taille 11 :
+Résultats des expérimentations:
+Joueur :robot1 : 36 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 61 victoires
+Taille 12 :
+Résultats des expérimentations:
+Joueur :robot1 : 31 victoires
+Joueur :robot3 : 5 victoires
+Joueur :robot2 : 64 victoires
+Profondeur 4 :
+Taille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 5 victoires
+Joueur :robot1 : 37 victoires
+Joueur :robot3 : 16 victoires
+Joueur :robot2 : 29 victoires
+Taille 5 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 54 victoires
+Joueur :robot3 : 6 victoires
+Joueur :robot2 : 36 victoires
+Taille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 43 victoires
+Joueur :robot3 : 8 victoires
+Joueur :robot2 : 44 victoires
+Taille 7 :
+Résultats des expérimentations:
+Joueur :robot1 : 41 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 56 victoires
+Taille 8 :
+Résultats des expérimentations:
+Joueur :robot1 : 35 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 60 victoires
+Taille 9 :
+Résultats des expérimentations:
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 59 victoires
+Taille 10 :
+Résultats des expérimentations:
+Joueur :robot1 : 45 victoires
+Joueur :robot2 : 55 victoires
+Taille 11 :
+Résultats des expérimentations:
+Joueur :robot1 : 29 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 70 victoires
+Taille 12 :
+Résultats des expérimentations:
+Joueur :robot1 : 47 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 51 victoires
+Profondeur 5 :
+Taille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 51 victoires
+Joueur :robot3 : 10 victoires
+Joueur :robot2 : 33 victoires
+Taille 5 :
+Résultats des expérimentations:
+Joueur :robot1 : 62 victoires
+Joueur :robot3 : 8 victoires
+Joueur :robot2 : 29 victoires
+Taille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 40 victoires
+Joueur :robot3 : 9 victoires
+Joueur :robot2 : 48 victoires
+Taille 7 :
+Résultats des expérimentations:
+Joueur :robot1 : 42 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 52 victoires
+Taille 8 :
+Résultats des expérimentations:
+Joueur :robot1 : 42 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 56 victoires
+Taille 9 :
+Résultats des expérimentations:
+Joueur :robot1 : 36 victoires
+Joueur :robot3 : 6 victoires
+Joueur :robot2 : 57 victoires
+Taille 10 :
+Résultats des expérimentations:
+Joueur :robot1 : 38 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 61 victoires
+Taille 11 :
+Résultats des expérimentations:
+Joueur :robot1 : 35 victoires
+Joueur :robot2 : 64 victoires
+Taille 12 :
+Résultats des expérimentations:
+Joueur :robot1 : 38 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 61 victoires
+Profondeur 6 :
+Taille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 2 victoires
+Joueur :robot1 : 49 victoires
+Joueur :robot3 : 8 victoires
+Joueur :robot2 : 36 victoires
+Taille 5 :
+Résultats des expérimentations:
+Joueur :robot1 : 63 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 32 victoires
+Taille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 2 victoires
+Joueur :robot1 : 46 victoires
+Joueur :robot3 : 9 victoires
+Joueur :robot2 : 40 victoires
+Taille 7 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 44 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 51 victoires
+Taille 8 :
+Résultats des expérimentations:
+Joueur :robot1 : 44 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 51 victoires
+Taille 9 :
+Résultats des expérimentations:
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 60 victoires
+Taille 10 :
+Résultats des expérimentations:
+Joueur :robot1 : 38 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 60 victoires
+Taille 11 :
+Résultats des expérimentations:
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 58 victoires
+Taille 12 :
+Résultats des expérimentations:
+Joueur :robot1 : 32 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 65 victoires

@@ -1,0 +1,142 @@
+Ce fichier de résultats présente les performances des expérimentations menées avec des grilles 
+de différentes tailles, où deux équipes s'affrontent : une utilisant l'algorithme SOS (équipe1) 
+et l'autre utilisant l'algorithme MaxN (équipe2). Les expérimentations ont été réalisées sur 
+des grilles de tailles variables (4 à 11), avec des équipes de différentes tailles (2 à 5 membres), 
+et pour chaque configuration, le nombre de victoires de chaque équipe a été enregistré.
+
+Taille de la grille 4 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 40 victoires
+Equipe equipe2 : 35 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 24 victoires
+Equipe equipe2 : 28 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 18 victoires
+Equipe equipe2 : 22 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 15 victoires
+Equipe equipe2 : 18 victoires
+Taille de la grille 5 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 44 victoires
+Equipe equipe2 : 29 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 35 victoires
+Equipe equipe2 : 26 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 28 victoires
+Equipe equipe2 : 27 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 25 victoires
+Equipe equipe2 : 24 victoires
+Taille de la grille 6 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 54 victoires
+Equipe equipe2 : 27 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 36 victoires
+Equipe equipe2 : 42 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 31 victoires
+Equipe equipe2 : 36 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 35 victoires
+Equipe equipe2 : 37 victoires
+Taille de la grille 7 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 58 victoires
+Equipe equipe2 : 31 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 53 victoires
+Equipe equipe2 : 31 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 38 victoires
+Equipe equipe2 : 36 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 41 victoires
+Equipe equipe2 : 34 victoires
+Taille de la grille 8 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 55 victoires
+Equipe equipe2 : 39 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 52 victoires
+Equipe equipe2 : 38 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 52 victoires
+Equipe equipe2 : 37 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 39 victoires
+Equipe equipe2 : 41 victoires
+Taille de la grille 9 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 54 victoires
+Equipe equipe2 : 41 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 56 victoires
+Equipe equipe2 : 40 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 53 victoires
+Equipe equipe2 : 38 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 39 victoires
+Equipe equipe2 : 42 victoires
+Taille de la grille 10 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 55 victoires
+Equipe equipe2 : 37 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 63 victoires
+Equipe equipe2 : 30 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 49 victoires
+Equipe equipe2 : 43 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 52 victoires
+Equipe equipe2 : 39 victoires
+Taille de la grille 11 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 71 victoires
+Equipe equipe2 : 23 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 66 victoires
+Equipe equipe2 : 30 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 61 victoires
+Equipe equipe2 : 28 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 62 victoires
+Equipe equipe2 : 28 victoires

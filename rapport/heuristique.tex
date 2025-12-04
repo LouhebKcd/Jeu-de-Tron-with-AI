@@ -1,0 +1,101 @@
+\section{Heuristiques et évaluation du jeu}
+
+\subsection{Heuristiques de base}
+
+Les heuristiques de base sont des méthodes utilisées pour évaluer la situation d'un joueur dans le jeu en fonction de critères spécifiques. Dans notre implémentation, nous utilisons plusieurs heuristiques de base pour estimer la qualité d'un coup ou la position d'un joueur. Voici les principales heuristiques que nous avons utilisées :
+\vspace{10pt}
+
+\begin{itemize}
+    \item \textbf{Distance aux joueurs adverses :} Cette heuristique calcule la distance entre le joueur actuel et les autres joueurs adverses. Un score est attribué en fonction de cette distance, favorisant les positions où le joueur est éloigné des adversaires.
+    
+    \item \textbf{Nombre total de cases vides environnantes :} Cette heuristique compte le nombre de cases vides autour du joueur actuel. Un score est attribué en fonction de ce nombre, favorisant les positions entourées de nombreuses cases vides.
+    
+   \item \textbf{Distance minimale par rapport aux murs :} Cette heuristique calcule la distance minimale entre le joueur actuel et les murs de la grille. Un score est attribué en fonction de cette distance, favorisant les positions éloignées des murs.
+    
+    \item \textbf{Distance au centre :} Cette heuristique calcule la distance entre le joueur actuel et le centre de la grille. Un score est attribué en fonction de cette distance, favorisant les positions proches du centre de la grille.
+    
+    \item \textbf{Distance minimale par rapport aux bords :} Cette heuristique calcule la distance minimale entre le joueur actuel et les bords de la grille. Un score est attribué en fonction de cette distance, favorisant les positions éloignées des bords de la grille.
+\end{itemize}
+\vspace{10pt}
+Ces heuristiques de base sont utilisées conjointement dans notre algorithme pour estimer la qualité d'une position ou d'un coup dans le jeu.
+
+
+
+\subsection{Méthode de Voronoi}
+
+Une autre approche d'évaluation de l'état du jeu , nous avons choisi d'utiliser la méthode des régions de Voronoi. Cette méthode nous permet de diviser l'espace de jeu en régions autour de chaque joueur, en attribuant à chaque joueur la région qui lui est la plus proche. les tailles des régions de Voronoi de chaque joueur sont ensuite utilisées comme base pour l'évaluation de l'état actuel du jeu.
+
+\vspace{10pt}
+
+\begin{itemize}
+
+\item \textbf {Compréhension de la méthode des régions de Voronoi :} 
+La méthode des régions de Voronoi est inspirée du concept des diagrammes de Voronoi, également connus sous le nom de tessellations de Voronoi. Elle tire son nom du mathématicien Georgy Voronoi et est largement utilisée dans divers domaines, y compris la cartographie, la biologie, et les jeux.
+
+L'idée fondamentale derrière les régions de Voronoi est de diviser l'espace en régions disjointes, chaque région étant associée à un joueur spécifique. Cette division est telle que chaque point dans une région donnée est plus proche du joueur correspondant que de tout autre joueur sur la carte.
+
+\vspace{10pt}
+
+\item \textbf {Implémentation dans notre évaluation de l'état du jeu :}
+Dans notre implémentation, nous utilisons la méthode des régions de Voronoi pour segmenter l'espace de jeu en régions autour de chaque joueur. Nous commençons par calculer les distances entre chaque case de la grille et les positions des joueurs à l'aide de l'algorithme de Dijkstra. Cette étape nous permet de déterminer le joueur le plus proche de chaque case.
+
+Une fois que nous avons identifié les joueurs les plus proches pour chaque case, nous attribuons à chaque case le joueur correspondant en tant que propriétaire de la région de Voronoi associée. Si plusieurs joueurs sont à égale distance d'une case, cette dernière n'est pas attribuée à un joueur spécifique, reflétant ainsi une zone de conflit.
+
+Voici un pseudo code de notre implémentation de l'algorithme de Dijkstra : 
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{L'état du jeu $state$ et le joueur $player$}
+\KwOut{Une matrice $distances$ contenant les distances de Dijkstra}
+\SetKwFunction{dijkstra}{dijkstra}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Fn{\dijkstra{$state$, $player$}}{
+    $distances \gets$ nouvelle matrice[$state.grid.length$][$state.grid[0].length$] \;
+    $directions \gets \{\{-1, 0\}, \{1, 0\}, \{0, -1\}, \{0, 1\}\}$ \;
+    $currentGrid \gets state.grid$ \;
+    $currentPosition \gets state.playerPosition[player]$ \;
+    $row \gets$ $currentPosition.x$ \;
+    $col \gets$ $currentPosition.y$ \;
+
+    \For{$i \gets 0$ \KwTo $distances.length - 1$}{
+        \For{$j \gets 0$ \KwTo $distances[0].length - 1$}{
+            $distances[i][j] \gets +\infty$ \;
+        }
+    }
+    $distances[row][col] \gets 0$ \;
+
+    $queue \gets$ nouvelle file d'attente \;
+    $queue$.enfiler(Point($row$, $col$)) \;
+
+    \While{la file d'attente n'est pas vide}{
+        $current \gets$ $queue$.défiler() \;
+        $x \gets$ $current.x$ \;
+        $y \gets$ $current.y$ \;
+        $distance \gets$ $distances[x][y]$ \;
+
+        \For{$direction$ \textbf{in} $directions$}{
+            $newX \gets x + direction[0]$ \;
+            $newY \gets y + direction[1]$ \;
+
+            \If{estPositionValide($newX$, $newY$, $currentGrid$) \textbf{et} $distances[newX][newY] = +\infty$}{
+                $distances[newX][newY] \gets distance + 1$ \;
+                $queue$.enfiler(Point($newX$, $newY$)) \;
+            }
+        }
+    }
+    \KwRet $distances$ \;
+}
+   \caption{Algorithme de Dijkstra}
+\end{algorithm}
+
+
+
+
+\vspace{10pt}
+\item \textbf {Utilisation des tailles de régions pour l'évaluation :}  Une fois les régions de Voronoi attribuées, nous utilisons les tailles de ces régions comme base pour évaluer l'état actuel du jeu. Chaque joueur se voit attribuer un score basé sur la taille de sa région de Voronoi respective. Cette approche permet de prendre en compte non seulement la position des joueurs, mais aussi la quantité d'espace qu'ils contrôlent, offrant ainsi une évaluation plus riche et nuancée de la situation de jeu.
+
+\vspace{10pt}
+\item \textbf  {Avantages et performances :}  L'utilisation des régions de Voronoi comme métrique d'évaluation présente plusieurs avantages. Tout d'abord, elle prend en compte la position et l'espace contrôlé par chaque joueur, ce qui permet une évaluation plus précise de l'état du jeu. De plus, notre implémentation de l'algorithme de Dijkstra garantit une évaluation efficace même pour des grilles de jeu de grande taille.
+
+\end{itemize}

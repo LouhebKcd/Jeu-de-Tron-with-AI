@@ -1,0 +1,58 @@
+\documentclass{rapport}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{algorithm2e}
+
+\usepackage{listings} % Inclure le paquet listings
+
+\lstset{ % Configurer les paramètres de lstlisting
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    language=Java
+}
+\usetikzlibrary{shapes.geometric, arrows}
+
+
+\title{Rapport conception} %Titre du fichier
+
+\begin{document}
+
+%----------- Informations du rapport ---------
+
+\logo{logos/Unicaen.png}
+\unif{Université de Caen Normandie}
+\titre{Jeu de Tron multi-joueur}
+
+
+\enseignant{Bruno \textsc{ZANUTTINI}\\Bonnet \textsc{Grégory}} %Nom de l'enseignants
+\jury{Bruno \textsc{ZANUTTINI }\\
+ \textsc{}}
+\eleves{Wassim \textsc{DJEHA} \\
+          Louheb \textsc{KACED} \\
+        Massinissa \textsc{MAOUCHE}\\
+        Rafik \textsc{HALIT}} %Nom des étudiants
+
+%----------- Initialisation -------------------
+        
+\fairemarges %Afficher les marges
+\fairepagedegarde %Créer la page de garde
+\tabledematieres %Créer la table de matières
+
+%------------ Corps du rapport ----------------
+\input{introduction.tex}    
+\input{objectifs.tex}
+\input{lancement.tex}
+\input{regles du jeu}
+\input{architectureprojet.tex}
+\input{MaxN.tex}
+\input{Paranoid.tex}
+\input{sos.tex}
+\input{heuristique.tex}
+\input{experimentation.tex}
+\input{conclusion.tex}
+\input{reference.tex}
+
+       
+\end{document}

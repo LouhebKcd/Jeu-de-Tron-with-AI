@@ -1,0 +1,58 @@
+\section{Comment lancer le projet?}
+\subsection{Lancement du projet}
+
+Pour lancer le projet, suivez ces étapes :
+
+\begin{enumerate}
+  \item \textbf{Compilation des classes :} Pour compiler toutes les classes, exécutez la commande suivante à partir du répertoire racine du projet :
+ 
+  \begin{verbatim}
+  javac -d build src/model/algorithmes/*.java src/model/evaluation/*.java
+  src/model/jeu/*.java src/model/main/*.java src/vue/*.java
+  \end{verbatim}
+ 
+  \item \textbf{Exécution des classes exécutables :} Une fois que toutes les classes ont été compilées, vous pouvez exécuter chaque classe exécutable individuellement :
+ 
+  \begin{itemize}
+    \item \textbf{Exécution de la classe principale DemoParametrable :}
+    
+    \begin{verbatim}
+    java -cp build model.main.DemoParametrable
+    \end{verbatim}
+    
+   \item \textbf{Exécution de la classe principale Main :} Pour exécuter la classe principale `Main` en spécifiant les arguments nécessaires, utilisez la commande suivante :
+ 
+  \begin{verbatim}
+    java -cp build model.main.Main <taille_grille> <profondeur_recherche>
+    <nombre_joueurs>
+    \end{verbatim}
+
+    
+   \item \textbf{Exécution de la classe principale MainSos :} Pour exécuter la classe principale \texttt{MainSos} en spécifiant les arguments nécessaires, utilisez la commande suivante :
+    
+    \begin{verbatim}
+    java -cp build model.main.MainSos <taille_grille> <profondeur_recherche>
+    <nombre_joueurs_par équipe>
+    \end{verbatim}
+    
+    \item \textbf{Exécution de la classe principale MainInter :} Pour lancer l'interface graphique du jeu, exécutez la classe principale \texttt{MainInter}. Utilisez la commande suivante :
+   
+    \begin{verbatim}
+    java -cp build vue.MainInter
+    \end{verbatim}
+  \end{itemize}
+ 
+  \item \textbf{Utilisation des fichiers JAR :} Vous trouverez les fichiers JAR dans le dossier \texttt{dist}. Une fois que vous avez les fichiers JAR, vous pouvez lancer le projet en utilisant les commandes suivante :
+    
+    \begin{verbatim}
+    java -jar JeuTronConsole.jar
+    \end{verbatim}
+    
+    Cette commande exécutera le jeu sur le terminal en utilisant le fichier JAR pour la version console du jeu.
+
+    \begin{verbatim}
+    java -jar JeuTronVueGraphique.jar
+    \end{verbatim}
+    
+    Cette commande exécutera une partie du jeu avec une interface graphique en utilisant le fichier JAR pour la version avec visualisation graphique du jeu.
+\end{enumerate}

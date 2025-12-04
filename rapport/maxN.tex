@@ -1,0 +1,65 @@
+\section{Algorithme MaxN}
+
+L'algorithme MaxN est une méthode de recherche utilisée pour déterminer la meilleure action à prendre dans un jeu à plusieurs joueurs. Dans cette section, nous détaillerons son fonctionnement et son implémentation dans notre projet.
+
+L'algorithme MaxN effectue une recherche récursive dans l'arbre des possibilités de jeu, en évaluant les états du jeu à différentes profondeurs. Il cherche à maximiser le score du joueur actuel tout en prenant en compte les possibilités de déplacements pour les autres joueurs.
+
+\subsection{Description de l'algorithme}
+
+L'algorithme MaxN fonctionne comme suit :
+
+\begin{enumerate}
+    \item À chaque niveau de profondeur de la recherche, il explore toutes les actions possibles pour le joueur courant.
+    \item Pour chaque action possible, il simule le résultat de cette action en appelant récursivement l'algorithme sur l'état suivant.
+    \item Il sélectionne l'action qui maximise le score du joueur courant.
+    \item Il retourne les valeurs évaluées pour chaque joueur.
+\end{enumerate}
+
+\subsection{Implémentation dans notre projet}
+
+Dans notre projet, l'algorithme MaxN est implémenté dans la classe \texttt{MaxNAlgorithme}. Cette classe hérite de la classe abstraite \texttt{AbstractAlgorithmeSearch} et implémente la méthode \texttt{algorithmeSearch}, qui effectue la recherche récursive selon l'algorithme MaxN.\\
+
+Voici un pseudo code de notre implémentation de l'algorithme MaxN :\\
+
+\begin{algorithm}[H]
+  \SetAlgoLined
+  \SetKwFunction{MaxN}{MaxN}
+  \SetKwFunction{IsTerminal}{IsTerminal}
+  \SetKwFunction{ActionsPossible}{ActionsPossible}
+  \SetKwProg{Fn}{Function}{:}{}
+  
+  \Fn{\MaxN{$state$, $action$, $voronoi$, $depth$, $currentPlayer$}}{
+    \If{\IsTerminal{$state$} or $depth == 0$}{
+      $voronoi$.assignVoronoiRegions($state$)\;
+      \Return{\texttt{evaluation.evaluate}($state$)}\;
+    }
+    $playerPositions \gets state$.getPlayerPosition()\;
+    possibleActions $\gets$ \ActionsPossible{state, currentPlayer}\;
+    $numPlayers \gets$ size of $playerPositions$\;
+    $bestValue \gets$ array of length $numPlayers$\;
+    \For{$possibleAction$ \textbf{in} $possibleActions$}{
+      $nextState \gets$ copy of $state$\;
+      $nextState \gets action$.applyAction($nextState$, $possibleAction$, $currentPlayer$)\;
+      value $\gets$ \MaxN{nextState, action, voronoi, depth - 1, nextPlayer(nextState, currentPlayer)}\;
+      \If{$bestValue[currentPlayer.getId()] < value[currentPlayer.getId()]$}{
+        $bestValue \gets value$\;
+      }
+    }
+    \Return{$bestValue$}\;
+  }
+  \caption{Algorithme MaxN}
+\end{algorithm}
+
+
+
+\subsection{Arbre MaxN}
+
+Ci-dessous, vous pouvez voir une représentation simplifiée de l'arbre de recherche MaxN pour 3 joueurs avec leurs scores :
+
+\begin{figure}[h]
+    \centering
+    % Insérez ici votre figure d'arbre MaxN
+    \includegraphics[width=0.8\textwidth]{images/maxn.png}
+    \caption{Arbre de recherche MaxN pour 3 joueurs}
+    \label{fig:arbre_maxn}
+\end{figure}

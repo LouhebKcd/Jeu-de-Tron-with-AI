@@ -1,0 +1,221 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\logo{\includegraphics[height=0.7cm]{images.png}}
+
+\usepackage[ruled,french,onelanguage]{algorithm2e}
+
+%\usepackage{palatino}
+\usetheme{Madrid}
+\usecolortheme{whale}
+\usepackage{movie15}
+\setbeamercolor{frametitle}{fg=white,bg=blue}
+
+\title{Soutenance du projet 2}
+\subtitle{Jeu de Tron}
+\author{Wassim Rafik Louheb Massinissa}
+\institute[Unicaen]
+{
+  UFR des Sciences\\
+  Université de Caen Normandie 
+}
+\date{04 Avril 2024}
+
+\begin{document}
+
+\begin{frame}
+\begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth]{pngegg.png} 
+    \end{figure}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sommaire}
+  \tableofcontents
+\end{frame}
+
+\section{Présentation du Jeu}
+\begin{frame}{Présentation du Jeu}
+\centering
+    \LARGE\textbf{C'est quoi le jeu de tron ?}
+    
+\end{frame}
+
+\section{Objectifs du Projet}
+
+\begin{frame}{Objectifs du Projet}
+    \begin{block}{}
+        \begin{itemize}
+            \item Implémentation d'un jeu de Tron (sans joueur humain).
+            \item Visualisation du jeu.
+             \item Implémentation de la méthode de Voronoi. 
+            \item Implémentation des algorithmes MAXN, Paranoid et SOS.
+            \item Réalisation d'expérimentations.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+
+\section*{Modélisation}
+
+\begin{frame}{Modélisation}
+    \begin{block}{Parties principales du jeu:}
+        \begin{itemize}
+            \item Actions possibles : Up, Down, Left, Right.
+            \item Représentation d'un joueur.
+            \item Représentation de la grille du jeu.
+            \item Représentation d'un état du jeu.
+            \item Mise en place des Algorithmes.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+
+\section{Algorithmes implementés}
+\begin{frame}{Algorithme MaxN}
+    \begin{block}{Principe et Fonctionnement}
+        L'algorithme MaxN explore de manière récursive les actions possibles dans un jeu à plusieurs joueurs, sélectionnant finalement l'action qui maximise le gain pour le joueur Max.
+    \end{block}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{Maxn.png} 
+        % \caption{Tron - Online Java Game Preview}
+    \end{figure}
+\end{frame}
+
+\section*{Algorithme Paranoid}
+
+\begin{frame}{Algorithme Paranoid}
+    \begin{block}{Principe et Fonctionnement}
+      L'algorithme Paranoid repose sur une stratégie paranoïaque, où le joueur principal anticipe la coopération des autres joueurs pour minimiser son score, ainsi il se déplace pour minimiser son propre risque.
+    \end{block}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{paranoid.png} 
+        % \caption{Tron - Online Java Game Preview}
+    \end{figure}
+\end{frame}
+
+\section*{Algorithme SOS}
+
+\begin{frame}{Algorithme SOS}
+    \begin{block}{Principe et Fonctionnement}
+        L'algorithme SOS équilibre stratégiquement les équipes en favorisant à la fois la coopération et la compétition entre les joueurs. En prenant en compte les relations sociales, il vise à maximiser à la fois la survie individuelle et la réussite collective.
+    \end{block}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{sos.png}
+        % \caption{Tron - Online Java Game Preview}
+    \end{figure}
+\end{frame}
+
+\section{Evaluation du jeu}
+
+\begin{frame}{Evaluation de base}
+    \begin{exampleblock}{Les heuristiques utilisées sont :}
+        \begin{itemize}
+            \item La distance par rapport aux autres joueurs.
+            \item La distance par rapport aux murs.
+            \item La distance par rapport au centre de la grille.
+            \item Le nombre de cases vides autour du joueur.
+            \item La distance par rapport aux bords de la grille.
+        \end{itemize}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Méthode Voronoi dans l'évaluation du jeu}
+
+\begin{block}{Principe et fonctionnement}
+    
+    \begin{itemize}
+        \item La méthode Voronoi est utilisée dans l'évaluation des jeux pour déterminer les zones de contrôle des joueurs.
+    \end{itemize}
+\end{block}
+    
+    \begin{figure}
+     \begin{center}
+        \includegraphics[width=0.2\textwidth]{voronoi_1.png}\hspace{5mm}
+        \includegraphics[width=0.2\textwidth]{voronoi_9.png}\hspace{5mm}
+        \includegraphics[width=0.2\textwidth]{voronoi_13.png}
+        \caption{Exemple région voronoi }
+        \label{fig:voronoi_images}
+     \end{center}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Interface Graphique}
+
+     
+   \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{ecran_interface.png} 
+        \caption{Une demo de notre jeu de tron}
+    \end{figure}
+    
+\end{frame}
+\section{Expérimentations}
+\begin{frame}{Résultats des expérimentations}
+    \begin{exampleblock}{\textbf{Représentation des résultats}}
+        \begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.52\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{resultats_exp_taille_grille.png}
+        \caption{Une partie entre un MaxN, un Paranoid et deux aléatoires en variant la taille de la grille.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sos_maxn_profondeur_4.png}
+        \caption{Une partie entre deux équipes, une SOS contre une MaxN en variant la taille des équipes.}
+    \end{minipage}
+\end{figure}
+    \end{exampleblock}
+\end{frame}
+
+\section{Répartition des tâches}
+
+\begin{frame}{Répartition des tâches principales}
+    \begin{block}{Tâches attribuées aux membres de l'équipe :}
+        \begin{itemize}
+            \item \textbf{ Wassim :}
+                \begin{itemize}
+                     Implémentation de l'algorithme MaxN et Paranoid 
+                \end{itemize}
+            \item \textbf{ Rafik :} 
+                \begin{itemize}
+                     Implémentation de la méthode de Voronoi pour l'évaluation
+                \end{itemize}
+            \item \textbf{ Louheb :} 
+                \begin{itemize}
+                    Implémentation de l'algorithme  SOS 
+                \end{itemize}
+            \item \textbf{ Massinissa :} 
+                \begin{itemize}
+                    Implémentation de l'interface graphique
+                \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\section{Améliorations}
+
+\begin{frame}{Améliorations}
+    \begin{center}
+        \LARGE Améliorations 
+    \end{center}
+\end{frame}
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+    \begin{center}
+        \LARGE Conclusion 
+    \end{center}
+\end{frame}
+
+\end{document}

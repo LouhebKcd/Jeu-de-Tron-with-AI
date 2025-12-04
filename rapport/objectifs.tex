@@ -1,0 +1,36 @@
+\section{Objectifs du projet}
+
+L'objectif principal de ce projet est de mettre en œuvre les algorithmes d'intelligence artificielle  spécifiques, notamment MAXN, Paranoid et SOS, pour le jeu de Tron multi-joueur et coalitions. Ces algorithmes constituent les fondements théoriques sur lesquels reposera notre approche pour résoudre les défis posés par le jeu. 
+
+En plus de l'implémentation des algorithmes, ce projet vise à réaliser des expérimentations approfondies pour évaluer les performances des joueurs solitaires et des coalitions dans différentes configurations de jeu. Cela impliquera la manipulation de paramètres tels que la profondeur de recherche, la taille de la grille et le nombre de joueurs dans chaque équipe.
+
+Un autre objectif clé est de répondre à la question scientifique du projet, qui porte sur l'influence de la profondeur de recherche sur les performances des joueurs solitaires et des coalitions, en tenant compte des variables telles que la taille des équipes et de la grille. Cette analyse permettra de dégager des conclusions importantes sur les stratégies les plus efficaces dans divers contextes de jeu.
+
+En résumé, les objectifs du projet comprennent l'implémentation des algorithmes MAXN, Paranoid et SOS, la réalisation d'expérimentations pour évaluer les performances des joueurs et des coalitions, ainsi que la réponse à la question scientifique sur l'impact de la profondeur de recherche dans différentes configurations de jeu.
+
+\subsection{Description des grandes étapes et fonctionnalités à implémenter}
+\subsubsection{Partie 1 : Réalisation du diagramme UML}
+Dans cette phase initiale, nous avons conçu un diagramme UML pour décrire la structure de notre application. Ce diagramme a représenté les différentes classes, leurs attributs et méthodes, ainsi que les relations entre elles. Il a servi de guide pour le développement ultérieur du projet, en fournissant une vue d'ensemble claire de l'architecture à mettre en place.
+
+\subsubsection{Partie 2 : Modélisation et mise en place des classes de base}
+Dans cette étape, nous avons commencé par la modélisation et la mise en place des classes de base nécessaires pour notre jeu. Cela inclut les classes représentant les joueurs, l'état du jeu et les actions possibles. nous avons étendu notre modélisation pour inclure les classes relatives aux algorithmes et aux évaluations de l'état du jeu. De plus, nous avons également inclus les classes du package 'vue' pour la visualisation du jeu avec une interface graphique.
+
+
+\subsubsection{Partie 2 : Implémentation de l'algorithme MaxN et Paranoid}
+Dans ces sections, nous avons implémenté les algorithmes MaxN et Paranoid pour la prise de décision dans le jeu. MaxN explore les possibilités pour maximiser le score du joueur actuel, tandis que Paranoid simplifie le jeu en supposant une coopération des adversaires pour minimiser le score du joueur principal. Ces approches permettent une prise de décision stratégique efficace en tenant compte des actions des adversaires.
+
+\subsubsection{Partie 3 : Implémentation des heuristiques basiques}
+Dans cette partie, nous avons implémenté diverses heuristiques de base pour évaluer la situation des joueurs dans le jeu. Ces heuristiques comprennent la distance aux joueurs adverses, le nombre de cases vides environnantes, la distance minimale par rapport aux murs, la distance au centre et la distance minimale par rapport aux bords de la grille. Ces métriques sont utilisées pour estimer la qualité d'une position ou d'un coup dans le jeu, et sont intégrées dans notre algorithme pour prendre des décisions stratégiques.
+
+\subsubsection{Partie 4 : Implémentation de la méthode de Voronoi pour améliorer l'évaluation du jeu}
+Dans cette section, nous avons mis en œuvre la méthode de Voronoi pour améliorer l'évaluation de l'état du jeu. 
+Cette approche divise l'espace de jeu en régions autour de chaque joueur, utilisant les tailles de ces régions comme base pour évaluer la situation de jeu. 
+
+\subsubsection{Partie 5 : Introduction de la notion d'équipes dans le jeu avec l'implémentation de l'algorithme SOS}
+{ L'algorithme SOS permet d'amener une dimension stratégique supplémentaire au jeu. Plutôt que de simplement se concentrer sur la survie individuelle, les joueurs doivent désormais collaborer avec leurs coéquipiers pour atteindre un objectif commun. L'algorithme SOS intervient ici en assignant les joueurs à des équipes de manière équilibrée et stratégique, ce qui favorise un jeu plus dynamique et engageant. En intégrant cette fonctionnalité, le jeu gagne en profondeur stratégique et en intérêt pour les joueurs, en encourageant la coopération et la compétition entre les équipes.}
+
+\subsubsection{Partie 6 : Mise en place des scripts bash pour le lancement des expérimentations}
+Dans cette section, nous avons élaboré des scripts bash permettant de lancer et d'analyser les résultats des tests dans notre environnement de jeu. Le premier script, nommé script.sh, offre une flexibilité en fixant deux paramètres tout en faisant varier un troisième, tel que la profondeur de recherche, pour évaluer les performances dans diverses configurations, scriptSOS.sh suit le meme principe que le premier. Le dérnier script, scriptProfondeur.sh, orchestre l'exécution des expériences avec différentes profondeurs, assurant ainsi une collecte de données efficace pour une analyse approfondie des performances du système.
+
+\subsubsection{Partie 7 : Utilisation de la librairie Matplotlib de Python pour représenter les résultats des expérimentations}
+Dans cette partie, nous avons employé la librairie Matplotlib de Python pour créer des graphiques illustrant clairement les résultats de nos expérimentations. Cette utilisation nous a permis de visualiser de manière efficace les performances de nos algorithmes dans divers scénarios de jeu, facilitant ainsi l'analyse des données expérimentales. En résumé, l'utilisation de Matplotlib a été cruciale pour une interprétation visuelle des résultats et pour éclairer nos décisions d'optimisation et d'amélioration du jeu.

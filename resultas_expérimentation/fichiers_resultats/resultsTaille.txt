@@ -1,0 +1,47 @@
+Ce fichier présente les résultats d'une expérimentation où les robots impliqués sont robot1 (MaxN),
+robot2 (Paranoid), robot3 et robot4 (Random), avec une taille de grille variable et une 
+profondeur fixe = 4.Les résultats sont répertoriés pour différentes tailles de grille, montrant 
+le nombre de victoires de chaque robot.
+
+Taille de la grille 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 14 victoires
+Joueur :robot1 : 14 victoires
+Joueur :robot3 : 16 victoires
+Joueur :robot2 : 15 victoires
+Taille de la grille 5 :
+Résultats des expérimentations:
+Joueur :robot4 : 12 victoires
+Joueur :robot1 : 23 victoires
+Joueur :robot3 : 15 victoires
+Joueur :robot2 : 24 victoires
+Taille de la grille 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 14 victoires
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 14 victoires
+Joueur :robot2 : 20 victoires
+Taille de la grille 7 :
+Résultats des expérimentations:
+Joueur :robot4 : 12 victoires
+Joueur :robot1 : 39 victoires
+Joueur :robot3 : 6 victoires
+Joueur :robot2 : 29 victoires
+Taille de la grille 8 :
+Résultats des expérimentations:
+Joueur :robot4 : 5 victoires
+Joueur :robot1 : 40 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 44 victoires
+Taille de la grille 9 :
+Résultats des expérimentations:
+Joueur :robot4 : 6 victoires
+Joueur :robot1 : 52 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 30 victoires
+Taille de la grille 10 :
+Résultats des expérimentations:
+Joueur :robot4 : 4 victoires
+Joueur :robot1 : 55 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 25 victoires

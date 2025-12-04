@@ -1,0 +1,28 @@
+\section{Règles du jeu et conditions de fin de partie}
+
+\subsection{Règles du jeu}
+
+Le jeu de Tron est une variante multi-joueurs du célèbre jeu du serpent. Sur une grille de taille fixe, chaque joueur contrôle un point qui peut se déplacer dans quatre directions (up, down, left et right). À chaque déplacement, le joueur laisse derrière lui un mur infranchissable.
+
+Les règles principales du jeu sont les suivantes :
+
+\begin{itemize}
+  \item Chaque joueur commence avec une position initiale sur la grille.
+  \item À chaque tour, chaque joueur peut choisir de se déplacer dans l'une des quatre directions possible.
+  \item Les joueurs jouent simultanément, ce qui signifie qu'ils effectuent leurs mouvements en même temps lors de chaque tour.
+  \item En se déplaçant, chaque joueur laisse derrière lui une trace (ou "mur") qui devient infranchissable pour tous les joueurs, y compris pour le joueur lui-même.
+  \item Le but du jeu est d'être le dernier joueur survivant en évitant les collisions avec les murs et les bords de la grille.
+  \item Si un joueur est bloqué et n'a aucune possibilité de déplacement, il est considéré comme mort.
+  \item Le jeu se termine lorsque tous les joueurs, sauf un, sont éliminés ou lorsque tous les joueurs d'une équipe ont perdu.
+\end{itemize}
+
+\subsection{Conditions de fin de partie}
+
+Les fonctions \texttt{isTerminal} et \texttt{isTerminalSos} déterminent si l'état actuel du jeu est terminal, c'est-à-dire s'il représente une fin de partie :
+
+\begin{itemize}
+  \item \textbf{Mode solo :} La fonction \texttt{isTerminal} vérifie si l'état du jeu en mode solo est terminal en vérifiant si un seul joueur ou aucun joueur n'est en vie. Si un seul joueur est en vie ou aucun joueur n'est en vie, l'état est considéré comme terminal.
+  dans le cas ou aucun joueur n'est en vie la partie est nulle.
+ 
+  \item \textbf{Mode équipe :} La fonction \texttt{isTerminalSos} vérifie si l'état du jeu en mode équipe est terminal en vérifiant si tous les joueurs d'une équipe sont morts. Si tous les joueurs d'une équipe sont morts, l'état est considéré comme terminal.
+\end{itemize}

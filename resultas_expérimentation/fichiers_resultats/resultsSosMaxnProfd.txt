@@ -1,0 +1,27 @@
+Ce fichier contient les résultats d'une expérimentation où la profondeur varie de 2 à 6. 
+Les robots impliqués sont robot1 (SOS), robot2 (MaxN), robot3 et robot4 (Random). 
+Pour chaque profondeur, les victoires de chaque robot sont répertoriées.
+
+Profondeur 2 :
+Résultats des expérimentations:
+Joueur :robot1 : 81 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 17 victoires
+Profondeur 3 :
+Résultats des expérimentations:
+Joueur :robot1 : 67 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 32 victoires
+Profondeur 4 :
+Résultats des expérimentations:
+Joueur :robot1 : 64 victoires
+Joueur :robot2 : 36 victoires
+Profondeur 5 :
+Résultats des expérimentations:
+Joueur :robot1 : 59 victoires
+Joueur :robot3 : 1 victoires
+Joueur :robot2 : 40 victoires
+Profondeur 6 :
+Résultats des expérimentations:
+Joueur :robot1 : 60 victoires
+Joueur :robot2 : 40 victoires

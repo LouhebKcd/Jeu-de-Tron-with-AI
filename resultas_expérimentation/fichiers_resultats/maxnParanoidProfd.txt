@@ -1,0 +1,36 @@
+Ce fichier de résultats contient les performances des expérimentations pour deux types de robots, 
+robot1 utilisant l'algorithme MaxN et robot2 utilisant l'algorithme Paranoïd, dont la profondeur 
+varie, ainsi que pour deux autres robots, robot3 et robot4, qui agissent de manière aléatoire. 
+Les expérimentations ont été menées à différentes profondeurs (2 à 6), et pour chaque profondeur, 
+le nombre de victoires de chaque joueur dans chaque configuration a été enregistré.
+
+Profondeur 2 :
+Résultats des expérimentations:
+Joueur :robot4 : 3 victoires
+Joueur :robot1 : 54 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 39 victoires
+Profondeur 3 :
+Résultats des expérimentations:
+Joueur :robot4 : 2 victoires
+Joueur :robot1 : 56 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 37 victoires
+Profondeur 4 :
+Résultats des expérimentations:
+Joueur :robot4 : 4 victoires
+Joueur :robot1 : 54 victoires
+Joueur :robot3 : 3 victoires
+Joueur :robot2 : 36 victoires
+Profondeur 5 :
+Résultats des expérimentations:
+Joueur :robot4 : 3 victoires
+Joueur :robot1 : 70 victoires
+Joueur :robot3 : 2 victoires
+Joueur :robot2 : 23 victoires
+Profondeur 6 :
+Résultats des expérimentations:
+Joueur :robot4 : 1 victoires
+Joueur :robot1 : 63 victoires
+Joueur :robot3 : 4 victoires
+Joueur :robot2 : 29 victoires

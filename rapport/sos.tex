@@ -1,0 +1,81 @@
+\section{Algorithme SOS}
+
+    \par{L'algorithme SOS, (Socially Oriented Search), est un algorithme utilisé dans les jeux multi-joueurs pour assigner les joueurs à des équipes de manière équilibrée et stratégique. Son principe repose sur l'idée de favoriser à la fois la coopération et la compétition entre les joueurs d'une équipes, en prenant en compte les relations sociales entre ces dérniers. En utilisant une approche de recherche basée sur la théorie des jeux, l'algorithme SOS explore différentes combinaisons d'équipes et évalue leurs performances potentielles. En sélectionnant judicieusement les équipes pour chaque joueur, l'algorithme vise à maximiser à la fois la survie individuelle et la réussite collective. Ce faisant, il ajoute une dimension sociale et stratégique supplémentaire aux jeux multi-joueurs, enrichissant ainsi l'expérience de jeu pour les participants.}
+    \subsection{Déscription de l'algorithme}
+    L’algorithme SOS fonctionne comme suit :
+    
+    \begin{enumerate}
+        \item À chaque niveau de profondeur de la recherche, il explore toutes les actions possibles pour le joueur courant.
+        \item Pour chaque action possible, il simule le résultat de cette action en appelant récursivement l'algorithme sur l'état suivant.
+        \item Il utilise la matrice de relation entre les joueurs pour évaluer la pertinence de chaque action en termes de cohésion d'équipe.
+        \item Il sélectionne l'action qui maximise le score du joueur courant, en tenant compte des relations sociales entre les joueurs.
+        \item Il retourne les valeurs évaluées pour chaque joueur.
+    \end{enumerate}
+
+    \subsection{Géneration et utilisation de la matrice de relation entre les joueurs}
+    \par{Dans l'algorithme SOS, une composante clé est l'utilisation d'une matrice de relation entre les joueurs pour évaluer la cohésion d'équipe et guider les décisions stratégiques. Cette matrice représente les liens sociaux entre les joueurs, indiquant quels joueurs sont dans la même équipe et quels joueurs sont adversaires. Chaque ligne et chaque colonne de la matrice correspondent à un joueur, et les valeurs dans la matrice indiquent s'il existe un lien social entre les joueurs correspondants. Pour représenter ce lien on attribut les valeurs suivantes : }
+    
+    \begin{enumerate}
+        \item \textbf{Collaboration (valeur 1)} :\\
+         Une valeur de 1 dans la matrice indique une collaboration entre les joueurs correspondants, signifiant qu'ils sont dans la même équipe.
+        \item \textbf{Individualisme (valeur 0)} :\\
+        Indique que deux joueurs sont dans des équipes différentes, soulignant une absence de lien social direct entre eux.
+        \item \textbf{Agression (valeur -1)} :\\
+        Indique un lien négatif entre deux joueurs, suggérant une relation agressive ou conflictuelle. Cette valeur peut être interprétée comme une compétition hostile entre les joueurs\\
+    \end{enumerate}
+        Cette matrice est générée en fonction des règles spécifiques du jeu et peut être mise à jour en fonction du style de jeu choisit.\\
+
+        Pour utiliser cette matrice dans l'algorithme SOS, chaque fois qu'une action est évaluée, l'algorithme multiplie la matrice par un vecteur représentant les performances potentielles de chaque joueur. Cette multiplication permet d'évaluer l'impact de chaque action sur la cohésion d'équipe, en prenant en compte les relations sociales entre les joueurs. Ainsi, l'algorithme peut sélectionner l'action optimale qui maximise le score du joueur courant tout en favorisant les interactions positives au sein de l'équipe.
+
+    \subsection{Implémentation dans notre projet}
+    Dans notre projet, l’algorithme SOS est implémenté dans la classe SOSAlgorithm.
+Cette classe hérite de la classe abstraite AbstractAlgorithmeSearch et implémente la
+méthode algorithmeSearch, qui effectue la recherche récursive selon l’algorithme SOS\\
+\newpage
+
+Voici un pseudo code de notre implémentation de l'algorithme SOS :\\
+
+
+    \begin{algorithm}[H]
+      \SetAlgoLined
+      \SetKwFunction{AlgoSOS}{SOS}
+      \SetKwFunction{IsTerminal}{isTerminalSos}
+      \SetKwFunction{GenerateSocialMatrix}{generateSocialRangeMatrix}
+      \SetKwFunction{MultiplierMatrix}{multiplierMatrice}
+      \SetKwFunction{ActionsPossible}{actionsPossible}
+      \SetKwProg{Fn}{Function}{:}{}
+      
+      \Fn{\AlgoSOS{$state$, $action$, $voronoi$, $depth$, $currentPlayer$}}{
+        \If{\IsTerminal{$state$} or $depth == 0$}{
+          $voronoi$.assignVoronoiRegions($state$)\;
+          \Return{\MultiplierMatrix{\GenerateSocialMatrix{$state$.getTeamPlayers()}, evaluation.evaluate($state$)}}\;
+        }
+        $playerPositions \gets state$.getPlayerPosition()\;
+        possibleActions $\gets$ \ActionsPossible{$state$, $currentPlayer$}\;
+        $numPlayers \gets$ size of $playerPositions$\;
+        $bestValue \gets$ array of length $numPlayers$\;
+        \For{$possibleAction$ \textbf{in} $possibleActions$}{
+          $nextState \gets$ copy of $state$\;
+          $nextState \gets action$.applyAction($nextState$, $possibleAction$, $currentPlayer$)\;
+          value $\gets$ \AlgoSOS{nextState, action, voronoi, depth - 1, nextPlayer(nextState, $currentPlayer$)}\;
+          \If{$bestValue[currentPlayer.getId()] \leq value[currentPlayer.getId()]$}{
+            $bestValue \gets value$\;
+          }
+        }
+        \Return{$bestValue$}\;
+      }
+      \caption{Algorithme SOS}
+    \end{algorithm}
+
+    \subsection{Arbre SOS}
+
+    \begin{figure}[h]
+        \centering
+        % Insérez ici votre figure d'arbre MaxN
+        \includegraphics[width=0.75\textwidth]{images/sos.png}
+        \caption{Arbre de recherche SOS pour 3 joueurs , utilisant la matrice \textit{\textbf{c}}}
+        \label{fig:arbre_maxn}
+    \end{figure}
+    Ci-dessus,l'arbre présente un exemple de recherche en profondeur guidée par la matrice  c. Dans cette configuration, les joueurs 1 et 2 démontrent une coopération partielle mais privilégient leur propre intérêt, tandis que le joueur 3 se montre égoïste, ne tenant compte que de son propre bénéfice. L'algorithme SOS sélectionne alors la branche centrale comme étant la meilleure décision, offrant ainsi une utilité perçue de 8 pour le joueur 1.
+
+

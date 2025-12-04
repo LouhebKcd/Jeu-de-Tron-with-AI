@@ -1,0 +1,72 @@
+\section{Algorithme Paranoid}
+
+L'algorithme Paranoid dans le jeu de Tron repose sur une hypothèse paranoïaque où le joueur principal suppose que les autres joueurs vont coopérer pour minimiser son score. Ainsi, il simplifie le jeu en le ramenant à une confrontation directe entre lui-même et une coalition virtuelle des autres joueurs. Fondé sur cette supposition, le joueur principal prend des décisions visant à minimiser son propre risque, ce qui simplifie l'arbre de jeu et lui permet d'anticiper plus efficacement les actions de ses adversaires. Cette approche offre une stratégie plus claire et cohérente, réduisant la complexité du jeu tout en permettant une meilleure anticipation des réactions adverses.
+
+\subsection{Description de l'algorithme}
+
+L'algorithme Paranoid fonctionne de la manière suivante :
+
+\begin{enumerate}
+\item À chaque niveau de profondeur de la recherche, il explore toutes les actions possibles pour le joueur courant.
+\item Pour chaque action possible, il simule le résultat de cette action en appelant récursivement l'algorithme sur l'état suivant.
+\item Il maintient deux tableaux de scores : l'un pour maximiser le score du joueur principal (max player) quand c'est à lui de jouer et l'autre pour minimiser son score quand il simule les actions des adversaires qui vont essayer de le minimiser.
+\item Il sélectionne les meilleures valeurs en fonction du joueur actuel et retourne ces valeurs évaluées pour chaque joueur.
+\end{enumerate}
+
+\subsection{Implémentation dans notre projet}
+
+Dans notre projet, l'algorithme Paranoid est implémenté dans la classe \texttt{ParanoidAlgorithm}. Cette classe hérite de la classe abstraite \texttt{AbstractAlgorithmeSearch} et implémente la méthode \texttt{algorithmeSearch}, qui effectue la recherche récursive selon l'algorithme Paranoid.
+
+Voici un pseudo-code illustrant l'implémentation de l'algorithme Paranoid :
+
+\begin{algorithm}[H]
+  \SetAlgoLined
+  \SetKwFunction{Paranoid}{ParanoidAlgorithm}
+  \SetKwFunction{IsTerminal}{IsTerminal}
+  \SetKwFunction{ActionsPossible}{ActionsPossible}
+  \SetKwProg{Fn}{Function}{:}{}
+  
+  \Fn{\Paranoid{$state$, $action$, $voronoi$, $depth$, $currentPlayer$}}{
+    \If{\IsTerminal{$state$} or $depth == 0$}{
+      $voronoi$.assignVoronoiRegions($state$)\;
+      \Return{\texttt{evaluation.evaluate}($state$)}\;
+    }
+    $playerPositions \gets state$.getPlayerPosition()\;
+    possibleActions $\gets$ \ActionsPossible{state, currentPlayer}\;
+    $numPlayers \gets$ size of $playerPositions$\;
+    $bestValuesMaxPlayer \gets$ array of length $numPlayers$\;
+    $bestValuesMinPlayer \gets$ array of length $numPlayers$\;
+    \For{$possibleAction$ \textbf{in} $possibleActions$}{
+      $nextState \gets$ copy of $state$\;
+      $nextState \gets action$.applyAction($nextState$, $possibleAction$, $currentPlayer$)\;
+      value $\gets$ \Paranoid{nextState, action, voronoi, depth - 1, nextPlayer(nextState, currentPlayer)}\;
+      \If{$currentPlayer$.equals($state$.getCurrentPlayer())}{
+        \If{$bestValuesMaxPlayer[currentPlayer.getId()] < value[currentPlayer.getId()]$}{
+          $bestValuesMaxPlayer \gets value$\;
+        }
+      } \Else {
+        \If{$bestValuesMinPlayer[currentPlayer.getId()] > value[currentPlayer.getId()]$}{
+          $bestValuesMinPlayer \gets value$\;
+        }
+      }
+    }
+    \If{$currentPlayer$.equals($state$.getCurrentPlayer())}{
+      \Return{$bestValuesMaxPlayer$}\;
+    } \Else {
+      \Return{$bestValuesMinPlayer$}\;
+    }
+  }
+  \caption{Algorithme Paranoid}
+\end{algorithm}
+
+\subsection{Arbre de recherche Paranoid}
+
+Ci-dessous, vous pouvez voir une représentation simplifiée de l'arbre de recherche Paranoid pour 3 joueurs avec les scores des joueurs :
+
+\begin{figure}[H]
+    \centering
+    % Insérez ici votre figure d'arbre Paranoid
+    \includegraphics[width=0.8\textwidth]{images/paranoid.png}
+    \caption{Arbre de recherche Paranoid pour 3 joueurs}
+    \label{fig:arbre_paranoid}
+\end{figure}

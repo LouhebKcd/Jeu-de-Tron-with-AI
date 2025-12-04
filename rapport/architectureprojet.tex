@@ -1,0 +1,109 @@
+\section {Conception du projet}
+
+\subsection{Architecture du projet}
+
+Voyons désormais comment nos classes et paquetages interagissent-ils entre eux.
+\subsubsection{Diagramme des classes}
+Dans le cadre de  notre diagramme  de classes, concernant la modélisation du jeu nous présentons les sous-paquetages 'jeu', 'algorithmes' et 'évaluation' du paquetage 'model' : 
+\newline 
+\begin{itemize}
+    \item \textbf{Paquetage jeu} :
+    Ce paquetage  comprend les classes essentielles pour la modélisation et la gestion de l'état du jeu. Ces classes sont cruciales pour représenter les éléments du jeu, gérer les actions des joueurs et évaluer les états du jeu.
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/jeu.png}
+    \caption{Paquetage jeu.}
+    \label{fig:paquetage jeu}
+\end{figure}
+
+\newpage
+
+ \item \textbf {Paquetage algorithmes} :
+Ce paquetage regroupe les différentes implémentations d'algorithmes utilisés dans le cadre du jeu. Ces algorithmes jouent un rôle crucial dans la prise de décision des joueurs , en évaluant les états de jeu et en choisissant les actions les plus stratégiques. Parmi les algorithmes disponibles, on retrouve notamment l'algorithme MaxN, l'algorithme Paranoid, l'algorithme SOS, et une abstraction de base, AbstractAlgorithmeSearch.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/algorithmes.png}
+    \caption{Paquetage algorithme.}
+    \label{fig:paquetage algorithme}
+\end{figure}
+
+\newpage
+
+ \item \textbf {Paquetage evaluation} :
+Ce paquetage  propose des mécanismes pour évaluer les états de jeu actuels, fournissant ainsi des informations essentielles aux algorithmes de prise de décisions. Il comprend une variété d'implémentations, telles que l'évaluation basique de l'état, la détermination des scores des joueurs, la stratégie Voronoi, ainsi qu'une implémentation de l'évaluation Voronoi, nommée VoronoiStateEvaluation.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/evaluation.png}
+    \caption{Paquetage evaluation.}
+    \label{fig:paquetage evaluation}
+\end{figure}
+
+
+\item \textbf{Paquetage vue} :
+Concernant la visualisation du jeu, nous présentons le paquetage 'vue', qui inclut les classes GameInterface, MainInter et SplashScreen.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/vue.png}
+    \caption{Paquetage vue.}
+    \label{fig:paquetage vue}
+\end{figure}
+
+\end{itemize}
+
+\subsubsection{Interface graphique}
+
+L'interface graphique du jeu a été développée pour offrir une expérience visuelle  aux utilisateurs. Cette interface permet de visualiser l'état actuel du jeu, d'interagir avec les contrôles et de suivre le déroulement de la partie en temps réel.
+
+\vspace{10pt}
+
+\textbf {Composants de l'Interface} :
+
+L'interface graphique est composée de plusieurs éléments interactifs :
+
+\begin{itemize}
+    \item \textbf  {Grille de Jeu}: La zone centrale de l'interface affiche la grille de jeu, où les joueurs évoluent. Chaque joueur est représenté par un cercle coloré, positionné sur la grille en fonction de sa position actuelle.
+    
+    \item \textbf  {Panneau de Contrôle}: En haut de l'écran, un panneau de contrôle permet aux utilisateurs d'interagir avec le jeu. Il contient des boutons pour démarrer, arrêter, redémarrer, replacer  et quitter la partie.
+
+    \item \textbf  {Légende des Joueurs}: Sur le côté gauche de l'écran, une légende affiche les noms des joueurs ainsi que les algorithmes qui les contrôlent. Cela permet aux utilisateurs de distinguer les différents joueurs et de comprendre leur mode de fonctionnement.
+    
+    \item \textbf {Étiquette du Gagnant}: En bas de l'écran, une étiquette dynamique annonce le nom du joueur gagnant à la fin de la partie, ou indique s'il s'agit d'un match nul.
+
+\end{itemize}
+
+
+\vspace{10pt}
+
+\textbf {Fonctionnalités Principales} :
+
+   L'interface graphique offre les fonctionnalités suivantes :
+
+\begin{itemize}
+
+    \item \textbf  {Démarrage et Arrêt de la Partie}: Les utilisateurs peuvent démarrer et arrêter la partie à tout moment en appuyant sur les boutons correspondants dans le panneau de contrôle.
+    
+    \item \textbf  {Redémarrage de la Partie}: Un bouton permet de redémarrer la partie à partir de zéro, en réinitialisant la grille et en replaçant les joueurs aléatoirement.
+    
+    \item  \textbf  {Remplacement des Joueurs}: Un autre bouton permet de remplacer les joueurs actuels par de nouveaux joueurs positionnés aléatoirement sur la grille.
+    
+    \item  \textbf  {Visualisation en Temps Réel}: L'interface graphique met à jour la grille et les positions des joueurs en temps réel, permettant aux utilisateurs de suivre le déroulement de la partie pendant qu'elle se joue.
+
+
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{images/ecran_interface.png}
+    \caption{Interface Graphique - Jeu de Tron}
+    \label{fig:interface}
+\end{figure}
+
+
+\end{itemize}
+       
+         
+		
+         

@@ -1,0 +1,64 @@
+Ce fichier présente les résultats d'une expérimentation où l'équipe 1 utilise l'algorithme SOS 
+et l'équipe 2 utilise l'algorithme MaxN. Les expériences sont menées à différentes profondeurs 
+et tailles d'équipe, indiquant le nombre de victoires pour chaque équipe.
+
+Profondeur 2 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 65 victoires
+Equipe equipe2 : 33 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 69 victoires
+Equipe equipe2 : 28 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 66 victoires
+Equipe equipe2 : 27 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 58 victoires
+Equipe equipe2 : 35 victoires
+Profondeur 3 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 56 victoires
+Equipe equipe2 : 38 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 61 victoires
+Equipe equipe2 : 33 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 64 victoires
+Equipe equipe2 : 33 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 58 victoires
+Equipe equipe2 : 33 victoires
+Profondeur 4 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 61 victoires
+Equipe equipe2 : 36 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 63 victoires
+Equipe equipe2 : 32 victoires
+Equipe de taille 4 :
+Résultats des expérimentations:
+Equipe equipe1 : 60 victoires
+Equipe equipe2 : 31 victoires
+Equipe de taille 5 :
+Résultats des expérimentations:
+Equipe equipe1 : 61 victoires
+Equipe equipe2 : 30 victoires
+Profondeur 5 :
+Equipe de taille 2 :
+Résultats des expérimentations:
+Equipe equipe1 : 62 victoires
+Equipe equipe2 : 29 victoires
+Equipe de taille 3 :
+Résultats des expérimentations:
+Equipe equipe1 : 66 victoires
+Equipe equipe2 : 27 victoires

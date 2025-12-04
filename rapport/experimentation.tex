@@ -1,0 +1,106 @@
+\section{Expérimentations et résultats}
+
+\subsection{Expérimentations}
+
+Dans cette section, nous décrivons les expérimentations que nous avons menées pour évaluer les performances de notre environement du jeu.
+
+\subsubsection{Script}
+
+Dans cette sous-section, nous présentons les scripts utilisés pour mener nos expérimentations.
+
+\vspace{10pt}
+\textbf{Script 1 : \texttt{script.sh}}
+Ce script est utilisé pour lancer les expérimentations en fixant un paramètre spécifique et en faisant varier deux autres paramètres parmi la profondeur, le nombre de joueurs ou la taille de la grille. Voici une explication détaillée de son fonctionnement :
+\vspace{10pt}
+\begin{itemize}
+    \item Le script prend en entrée trois paramètres, en fixant un paramètres et en faisant varier les deux autres, le script permet de tester différentes configurations du jeu pour évaluer les performances du système dans des conditions variées.
+    \item Après avoir exécuté le programme Java compilé avec la profondeur spécifiée et les autres paramètres, le script capture la sortie et extrait le nom du joueur gagnant.
+    \item Les résultats de chaque expérimentation sont enregistrés dans un fichier de sortie.
+\end{itemize}
+\vspace{10pt}
+Grâce à cette flexibilité, le script permet une exploration approfondie des performances du système en permettant de tester différentes combinaisons de paramètres, ce qui peut être utile pour l'analyse des résultats et l'optimisation du jeu.
+\vspace{10pt}
+
+\textbf{Script 2 : \texttt{scriptSOS.sh}}
+Ce script suit un fonctionnement similaire à "script.sh", mais ici, les expérimentations sont axées sur les équipes gagnantes du jeu simulé, et les paramètres variables incluent la taille de la grille, la profondeur, et le nombre de joueurs par équipe. 
+\vspace{10pt}
+
+\textbf{Script 3: \texttt{scriptProfondeur.sh}}
+ Permet l'exécution automatisée d'expérimentations sur plusieurs paramètres essentiels du jeu. Voici les éléments principaux que nous varions dans nos expérimentations :
+
+\begin{itemize}
+    \item \textbf{Profondeurs de Recherche : } Nous évaluons les performances de notre algorithme en variant les profondeurs de recherche. \texttt{depths}.
+    \item \textbf{Tailles de Grille : }
+    En testant différentes tailles de grille, nous examinons comment les performances de notre algorithme évoluent en fonction de la taille du terrain de jeu.
+    \item \textbf{Tailles d'Équipe : }
+    En variant les tailles d'équipe, nous évaluons comment notre algorithme se comporte dans des configurations de jeu avec différentes dynamiques d'équipe.
+
+\end{itemize}
+
+Ces scripts ont été conçus pour automatiser le processus d'exécution des expérimentations et pour recueillir les résultats de manière efficace et cohérente.
+
+
+\newpage
+\begin{figure}[htbp]
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/histogramme.png}
+     \caption{\textbf{Résultats sur quatre joueurs : un MaxN, un SOS et deux aléatoires, sur 100 expérimentations pour chaque profondeur.La profondeur de recherche varie à chaque étape. }}
+    \label{fig:image1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/histogramme_taille_grille.png}
+    \caption{\textbf{Résultats sur quatre joueurs : un MaxN, un Paranoid et deux aléatoires, sur 100 expérimentations pour chaque taille. À chaque étape, la taille de la grille a été variée. }}
+
+  \end{subfigure}
+  \vskip\baselineskip
+    \vskip\baselineskip
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/grapheMaxnParanoidProfd.png}
+    \caption{\textbf{Résultats sur quatre joueurs : un MaxN, un Paranoid et deux aléatoires, sur 100 expérimentations pour chaque profondeur.La profondeur de recherche varie à chaque étape.  }}
+    
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/graphe_sos_maxn_paranoid_profondeur6.png}
+    \caption{\textbf{Résultats sur quatre joueurs : un MaxN, un Paranoid et , un SOS et un aléatoire, sur 100 expérimentations pour chaque taille. À chaque étape, la taille de la grille a été variée.}}
+
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/sos_maxn_profondeur_4.png}
+    \caption{\textbf{Résultats pour deux équipes: une avec SOS, l'autre avec Maxn, sur 100 expérimentations pour chaque taille. La taille des équipes varie à chaque étape. }}
+
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/sos_paranoid_profondeur_4.png}
+    \caption{\textbf{Résultats pour deux équipes: une avec SOS, l'autre avec Paranoid, sur 100 expérimentations pour chaque taille. La taille des équipes varie à chaque étape}}
+
+  \end{subfigure}
+  \label{fig:six_images}
+\end{figure}
+\newpage
+\subsection{Résultats}
+
+Pour répondre à la question scientifique sur l'influence de la profondeur de recherche sur le jeu en fonction de la taille des équipes et de la taille de la grille, plusieurs expérimentations ont été réalisées. Les résultats de ces expérimentations sont présentés ci-dessus par des histogrammes et des graphes.
+
+Dans ces expérimentations, nous avons d'abord varié la profondeur de recherche, puis la taille de la grille, et enfin la taille des équipes. Les observations issues de ces variations sont décrites ci-dessous.
+
+\subsubsection{Variation de la profondeur de recherche}
+
+En ce qui concerne la profondeur de recherche, nous avons obtenu plusieurs résultats spécifiques pour chaque algorithme, mais nous ne pouvons pas conclure grand-chose à partir de la profondeur seule, car elle est liée à d'autres facteurs tels que la taille de la grille et la taille des équipes. Même la manière de positionner les joueurs influence cela. Cependant, nous pouvons remarquer certains effets. Par exemple, dans une expérimentation où nous avons fait jouer MaxN et SOS avec deux robots aléatoires, nous avons remarqué que lorsque la profondeur augmente, MaxN performance de MaxN et gagne davantage de parties, et la performance de Sos baisse. De même, dans le cas où nous avons fait jouer MaxN et Paranoid avec deux robots aléatoires, c'est MaxN qui est toujours plus performant quelle que soit la profondeur de recherche.
+
+
+
+\subsubsection{Variation de la taille de la grille}
+
+En faisant varier la taille de la grille, on a remarqué qu'à chaque fois que la taille de la grille augmente, MaxN gagne plus de parties, c'est-à-dire qu'il devient plus performant. Par exemple, nous avons réalisé des expérimentations où un robot a joué avec MaxN et un autre avec Paranoid, ainsi que deux robots aléatoires. À chaque augmentation de la taille de la grille, le nombre de victoires de MaxN augmente. Dans une autre expérimentation où MaxN, Paranoid, SOS et un robot aléatoire ont joué, nous avons également observé que MaxN gagne le plus souvent par rapport aux autres à mesure que la grille devient de plus en plus grande.
+
+
+
+\subsubsection{Variation de la taille des équipes}
+
+En ce qui concerne la variation de la taille des équipes, nous avons lancé plusieurs expérimentations où nous avons fait varier la taille des équipes pour différentes profondeurs. Nous avons remarqué que l'équipe qui utilise SOS gagne le plus souvent, ce résultat étant conforme à nos attentes. En effet, l'équipe qui joue avec SOS bénéficie d'une coordination entre ses joueurs, ce qui n'est pas le cas pour les autres équipes. Même si la taille de l'équipe change, l'équipe SOS reste la plus performante.
+\newpage
+Enfin, nos expérimentations ont mis en lumière l'impact significatif de la profondeur de recherche, de la taille de la grille et de la taille des équipes sur les performances des algorithmes dans le jeu. Nous avons observé que MaxN tend à devenir plus performant avec une taille de grille plus grande, tandis que l'équipe utilisant SOS a démontré une efficacité constante, bénéficiant d'une meilleure coordination entre ses membres et montrant ainsi l'efficacité de l'algorithme SOS lorsqu'on joue avec des équipes.
