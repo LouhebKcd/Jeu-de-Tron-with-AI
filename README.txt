@@ -4,17 +4,6 @@
 
 * Le travail consiste à la réalisation du Jeu de Tron sans joueurs humains.
 
-* Ce-dernier est réalisé en Java par : 
- ________________________________________________
-| Nom         | Prénom      | Numéro d'étudiant  |
-|-------------|-------------|--------------------|
-| DJEHA       | Wassim      | 22208244           |
-| KACED       | Louheb      | 22111744           |
-| HALIT         Rafik       | 22210612           |
-| MAOUCHE     | Massinissa  | 22210351           |
-|_____________|_____________|____________________|
-
-
 ------------------------------------------------------------------------
 Pour lancer le projet, suivez ces étapes :
 1. Compilation des classes :
@@ -65,3 +54,4 @@ Pour lancer le projet, suivez ces étapes :
 	
 	
 	
+
